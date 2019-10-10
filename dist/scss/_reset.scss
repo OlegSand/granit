@@ -1,0 +1,21 @@
+* {
+    box-sizing: border-box;
+  }
+  body {
+    margin: 0 auto;
+    font: 10px/1 sans-serif;
+  }
+  
+  li {
+    list-style-type: none;
+    &:hover {
+      text-decoration: none;
+    }
+  }
+  a {
+    text-decoration: none;
+    &:hover {
+      text-decoration: none;
+    }
+    
+  }
