@@ -3,7 +3,7 @@
   }
   body {
     margin: 0 auto;
-    font: 10px/1 sans-serif;
+    font: 10px/1 'GothamPro','GothamPro-Bold', 'GothamPro-Regular', 'GothamPro-Medium', 'GothamPro-Light', sans-serif;
   }
   
   li {
@@ -14,6 +14,7 @@
   }
   a {
     text-decoration: none;
+    color: inherit;
     &:hover {
       text-decoration: none;
     }
