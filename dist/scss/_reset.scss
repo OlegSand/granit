@@ -1,9 +1,10 @@
 * {
     box-sizing: border-box;
+    vertical-align: inherit;
   }
   body {
     margin: 0 auto;
-    font: 10px/1 'GothamPro','GothamPro-Bold', 'GothamPro-Regular', 'GothamPro-Medium', 'GothamPro-Light', sans-serif;
+    font: 10px/1em 'GothamPro','GothamPro-Bold', 'GothamPro-Regular', 'GothamPro-Medium', 'GothamPro-Light', sans-serif;
   }
   
   li {
@@ -21,6 +22,11 @@
     }
     
   }
+
+p {
+  margin-bottom: 0;
+}
+
   button {
     border: 0;
     &:focus {
@@ -29,5 +35,10 @@
   }
 
   .row>*{
+    margin: 0;
+  }
+  
+  .col-md-12 {
+    padding: 0;
     margin: 0;
   }

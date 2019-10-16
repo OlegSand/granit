@@ -126,3 +126,53 @@
 #serto {
     background: url(../img/header-bg.png) 100% 100% no-repeat;
 }
+
+.block_name {
+    text-transform: uppercase;
+    font-family: 'GothamPro-Bold';
+    font-size: 2em;
+    text-align: center;
+    margin: 4em 0 3em 0;
+}
+
+// MAIN
+
+.sand_card {
+    text-align: center;
+    vertical-align: middle;
+    border: 2px solid #f6f6f6;
+    & > * {
+        text-align: center;
+    }
+    & img {
+        line-height: 215px;
+        vertical-align: middle;
+    }
+}
+
+.product_photo {
+    line-height: 215px;
+}
+
+.product_name {
+    font-size: 15px;
+    font-family: 'GothamPro-Medium';
+}
+
+.product_description {
+    color: #626262;
+    font-size: 13px;
+    font-family: 'GothamPro-Regular';
+    padding: 20px 38px 29px 38px;
+}
+
+.product_price {
+    font-family: 'GothamPro-Medium';
+    font-size: 16px;
+}
+
+.product_details {
+    font-family: 'GothamPro-Medium';
+    font-size: 12px;
+    padding: 1.5em 4.5em;
+}
