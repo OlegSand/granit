@@ -3,9 +3,13 @@
 }
 
 .logo {
-    width: 3.8em;
-    height: 4em;
+    padding: 0;
 }
+
+// .logo_wrapp {
+//     width: 3.8em;
+//     height: 4em;
+// }
 
 .brand {
     height: 100%;
@@ -37,17 +41,88 @@
 .contact_tel {
     font-weight: 700;
     font-size: 2em;
-    line-height: 22px;
     text-transform: uppercase;
     font-family: 'GothamPro-Bold';
+    & a {
+        text-decoration: none;
+    }
+}
 
+.callback {
+    text-align: right;
 }
 
 .callback_form {
     width: 160px;
     height: 40px;
     font-size: 12px;
-    font-family: 'GothamPro-Medium';
+    font-family: 'GothamPro-Bold';
     background: #fff;
     border: 2px solid #292929;    
+}
+
+.nav-list {
+    padding: 0;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-around;
+    background: $yellowMenuColor;
+    color: #000000;
+    font-family: 'GothamPro-Medium';
+    font-size: 1.4em;
+    padding: 20px 0;
+    margin: 30px 0 -30px 0;
+    & a {
+        text-decoration: none;
+    }
+}
+
+.main_text {
+    margin-top: 16em;
+    color: #fff;
+}
+
+.main_text_slogan {
+    text-transform: uppercase;
+    font-size: 3.6em;
+    font-family: 'GothamPro-Bold';
+}
+
+.main_text_descr {
+    font-size: 1.4em;
+    font-family: 'GothamPro-Regular';
+    margin: 2em 0 4em 0;
+    line-height: 22px;
+}
+
+.delivery_details {
+    color: #0d0d0d;
+    margin-right: 1.5em;
+    padding: 2em 3em;
+    font-family: 'GothamPro-Medium';
+    font-size: 1.2em;
+    background: $yellowButtonColor;
+}
+
+.or {
+    font-family: 'GothamPro-Regular';
+    font-size: 1.2em;
+}
+
+.to_catalog {
+    font-family: 'GothamPro-Medium';
+    font-size: 1.2em;
+}
+
+.price_nav {
+    margin-bottom: 14em;
+    span+span {
+        margin: 1.5em;
+    }
+}
+
+#serto {
+    background: url(../img/header-bg.png) 100% 100% no-repeat;
 }
