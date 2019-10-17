@@ -141,12 +141,9 @@
     text-align: center;
     vertical-align: middle;
     border: 2px solid #f6f6f6;
+    margin-bottom: 8em;
     & > * {
         text-align: center;
-    }
-    & img {
-        line-height: 215px;
-        vertical-align: middle;
     }
 }
 
@@ -164,6 +161,7 @@
     font-size: 13px;
     font-family: 'GothamPro-Regular';
     padding: 20px 38px 29px 38px;
+    line-height: 17px;
 }
 
 .product_price {
@@ -175,4 +173,35 @@
     font-family: 'GothamPro-Medium';
     font-size: 12px;
     padding: 1.5em 4.5em;
+    margin: 3em 0 3.1em 0;
+    background: $yellowButtonColor;
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+#our_advantages {
+    background: $advantageGrayBg;
+}
+
+
+
+.advantage_card {
+    text-align: center;
+    vertical-align: middle;
+    border: 2px solid #ffffff;
+    margin-bottom: 8em;
+    & > * {
+        text-align: center;
+    }    
+    &:hover {
+        background: #ffffff;
+    }
+    & .product_photo {
+        line-height: 130px;
+    }
+    & .product_description {
+        color: #292929;
+        padding: 20px 36px 43px 32px;
+    }
 }
