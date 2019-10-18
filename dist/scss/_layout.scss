@@ -181,12 +181,6 @@
     }
 }
 
-#our_advantages {
-    background: $advantageGrayBg;
-}
-
-
-
 .advantage_card {
     text-align: center;
     vertical-align: middle;
@@ -265,3 +259,22 @@
     text-transform: uppercase;
     z-index: 9999;
 }
+
+.service_card {
+    text-align: center;
+    border: 2px solid #ffffff;
+    & .product_photo {
+        line-height: 200px;
+    }
+    & .product_name {
+        margin-bottom: 4em;
+        color: $boldTextColour;
+        font-family: 'GothamPro-Medium';
+        font-size: 15px;
+        text-decoration: underline;
+        &:hover {
+            text-decoration: none;
+        }
+    }
+}
+
