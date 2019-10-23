@@ -4,6 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css"
+        integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+        crossorigin=""/>
+        <script src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js"
+    integrity="sha512-GffPMF3RvMeYyc1LWMHtK8EbPv0iNZ8/oTtHPx9/cc2ILxQ+u905qIwdpULaqDkyBKgOaB57QTMg7ztg8Jm2Og=="
+    crossorigin=""></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.0.3/leaflet.js"></script>
+    <script src="https://cdn.maptiler.com/mapbox-gl-js/v0.53.0/mapbox-gl.js"></script>
+    <script src="https://cdn.maptiler.com/mapbox-gl-leaflet/latest/leaflet-mapbox-gl.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.0.3/leaflet.css" />
+    <link rel="stylesheet" href="https://cdn.maptiler.com/mapbox-gl-js/v0.53.0/mapbox-gl.css" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css">
     <title>GRANIT</title>
@@ -14,7 +25,7 @@
         <section>
             <div class="container">
                 <div class="row">
-                    <div class="col-md-12 d-flex head_info">
+                    <div class="col-md-12 d-flex info_block">
                         <div class="col-md-6">
                             <div class="col-md-12 d-flex">
                                 <div class="col-md-1 logo">
@@ -125,25 +136,6 @@
                                 <button class="product_details" type="button">Подробнее</button>
                             </div>
                         </div>
-
-                        <!-- <div class="col-md-4"><div class="sand_card">
-                            <div class="product_photo">
-                                <img src="img/sand.png" alt="sand">
-                            </div>
-                            <p class="product_name"><a href="#">Песок речной</a></p>
-                            <p class="product_description">Мелкий речной песок повышает прочность, долговечность и морозоустойчивость растворов, в состав которых он входит. </p>
-                            <p class="product_price">от 330 р./т</p>
-                            <button class="product_details" type="button">Подробнее</button>
-                        </div></div>
-                        <div class="col-md-4"><div class="sand_card">
-                            <div class="product_photo">
-                                <img src="img/sand.png" alt="sand">
-                            </div>
-                            <p class="product_name"><a href="#">Песок речной</a></p>
-                            <p class="product_description">Мелкий речной песок повышает прочность, долговечность и морозоустойчивость растворов, в состав которых он входит. </p>
-                            <p class="product_price">от 330 р./т</p>
-                            <button class="product_details" type="button">Подробнее</button>
-                        </div></div> -->
                     </div>
                 </div>
             </div>
@@ -279,12 +271,97 @@
             </div>
         </section>
         <!-- MAP BEGIN -->
+        <section>
+            <div id="mymap">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12 contacts-bottom">
+                            <div class="contacts-bottom_card">
+                                <p>контакты</p>
+                                <div class="col-md-12 contact_info tel">
+                                    <div class="col-md-2">
+                                        <img src="img/icon/phone-icon.png" alt="phone">
+                                    </div>
+                                    <div class="col-md-10 contact_info__tel">
+                                        <a href="tel:+88003421333">8 800 034-23-34</a>
+                                        <a href="tel:+88003421333">8 495 034-23-34</a>
+                                    </div>
+                                </div>
+                                <div class="col-md-12 contact_info location">
+                                    <div class="col-md-2">
+                                        <img src="img/icon/location-icon.png" alt="location">
+                                    </div>
+                                    <div class="col-md-10 contact_info__location">
+                                        <address>Московская обл. г. Балашиха, 
+                                                пер. Столовой, д.23, кор. 34</address>
+                                    </div>
+                                </div>
+                                <div class="col-md-12 contact_info mail">
+                                    <div class="col-md-2">
+                                        <img src="img/icon/mail-icon.png" alt="mail">
+                                    </div>
+                                    <div class="col-md-10 contact_info__mail">
+                                        <span>Info@stroika.ru</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </section>
+
         <!-- MAP END -->
     </main>
     <!-- MAIN END -->
     <!-- FOOTER BEGIN -->
-    <footer></footer>
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 d-flex info_block footer_info">
+                    <div class="col-md-9">
+                        <div class="col-md-12 d-flex">
+                            <div class="col-md-1 logo">
+                                <div class="logo_wrapp">
+                                    <img src="img/logo-bottom.png" alt="logo">
+                                </div>
+                            </div>
+                            <div class="col-md-11 brand">
+                                <div class="col-md-12 brand_name">granit</div>
+                                <div class="col-md-12 brand_slogan">Доставка нерудных материалов</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 contact">
+                        <div class="col-md-12 contact_tel">
+                            <a href="tel:+88003421333">8 800 342-13-33</a>
+                        </div>
+                        <div class="col-md-12 tel_info">Бесплатный звонок по России</div>
+                    </div>
+                    <!-- <div class="col-md-3">
+                    </div> -->
+                </div>
+                <div class="col-md-12 d-flex info_block footer_info license_block">
+                    <div class="col-md-9">
+                        <div class="col-md-12 d-flex license_text">
+                            <p>© 2016. Гранти </p>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="callback">
+                            <button class="callback_form">Обратный звонок</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
     <!-- FOOTER END -->
     <script src="js/main.js"></script>
+
+    
+    
+    <script src="js/map.js"></script>
 </body>
 </html>
