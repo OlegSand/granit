@@ -26,27 +26,12 @@ function sassFoo(cb) {
     .pipe(browserSync.stream());
 }
 
-// function compress(cb) {
-//     pump([        
-//         src('dist/js/*.js')
-//             .pipe(concat('all.js'))
-//             .pipe(uglify()),
-//             dest('app/js/test.js')
-//     ],
-//         cb
-//     );
-// };
 function compress() {
     src('dist/js/*.js')
     .pipe(uglify())
     .pipe(concat('all.js'))
         dest('app/js')
 };
-
-// function watch() {
-//     watch('dist/sass/**/*.scss', parallel('sass'));
-// 	// watch('dist/js/*.js', parallel('compress');
-// }
 
 function watcher() {
     watch('dist/scss/**/*.scss', series(sassFoo));
@@ -57,8 +42,4 @@ exports.sassFoo = sassFoo;
 exports.compress = compress;
 exports.serve = serve;
 exports.watcher = watcher;
-// exports.default = function () {
-//     watch('dist/sass/**/*.scss', series(sassFoo));
-//     // watch('dist/js/*.js', compress);
-// };
 exports.default = parallel(watcher, serve);
