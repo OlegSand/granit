@@ -2,7 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css"
         integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
@@ -23,9 +24,9 @@
     <!-- HEADER BEGIN -->
     <header>
         <section>
-            <div class="container">
+            <div class="container info_top">
                 <div class="row">
-                    <div class="col-md-12 d-flex info_block">
+                    <div class="col-md-12 d-flex info_block info_block__top">
                         <div class="col-md-6">
                             <div class="col-md-12 d-flex">
                                 <div class="col-md-1 logo">
@@ -41,9 +42,9 @@
                         </div>
                         <div class="col-md-3 contact">
                             <div class="col-md-12 contact_tel">
-                                <a href="tel:+88003421333">8 800 342-13-33</a>
+                                <p><a href="tel:+88003421333">8 800 342-13-33</a></p>
                             </div>
-                            <div class="col-md-12 tel_info">Бесплатный звонок по России</div>
+                            <div class="col-md-12 tel_info">Бесплат ный звонок по России</div>
                         </div>
                         <div class="col-md-3">
                             <div class="callback">
@@ -72,20 +73,22 @@
                     </div>
                 </div>
             </div>
-            <div class="container-fluid" id="serto">
+            <div class="container-fluid" id="main_info">
                 <div class="container">
                     <div class="row">
-                        <div class="col-md-12 main_text">
-                            <h2 class="col-md-12 main_text_slogan">быстрая доставка</h2>
-                    
-                            <p class="col-md-12 main_text_descr">бетона, щебня, песка <br>
-                                и других нерудных материалов <br>
-                                по Москве и Московской области
-                            </p>
-                            <div class="col-md-12 price_nav">
-                                <button class="delivery_details" type="button">Подробнее о доставке</button>
-                                <span class="or">или</span>
-                                <span class="to_catalog"><a href="#">перейти в каталог</a></span>
+                        <div class="container">
+                            <div class="col-md-12 main_text">
+                                <h2 class="col-md-12 main_text_slogan">быстрая доставка</h2>
+                        
+                                <p class="col-md-12 main_text_descr">бетона, щебня, песка <br>
+                                    и других нерудных материалов <br>
+                                    по Москве и Московской области
+                                </p>
+                                <div class="col-md-12 price_nav">
+                                    <button class="delivery_details" type="button">Подробнее о доставке</button>
+                                    <span class="or">или</span>
+                                    <span class="to_catalog"><a href="#">перейти в каталог</a></span>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -102,7 +105,7 @@
                     <div class="col-md-12 block_name">
                         <p>всегда в наличии</p>
                     </div>
-                    <div class="col-md-12 d-flex">
+                    <div class="col-md-12 d-flex stock">
                         <div class="col-md-4">
                             <div class="sand_card">
                                 <div class="product_photo">
@@ -146,7 +149,7 @@
                     <div class="col-md-12 block_name">
                         <p>наши преимуества</p>
                     </div>
-                    <div class="col-md-12 d-flex advantage">
+                    <div class="col-md-12 d-flex stock advantage">
                         <div class="col-md-4">
                             <div class="advantage_card ">
                                 <div class="product_photo">
@@ -187,7 +190,7 @@
                     <div class="col-md-12 block_name">
                         <p>Популярные товары</p>
                     </div>
-                    <div class="col-md-12 d-flex goods_list">
+                    <div class="col-md-12 d-flex stock goods_list">
                         <div class="col-md-3">
                             <div class="goods_list__card sale">
                                 <div class="product_photo ">
@@ -241,7 +244,7 @@
                     <div class="col-md-12 block_name">
                         <p>Наши услуги</p>
                     </div>
-                    <div class="col-md-12 d-flex service">
+                    <div class="col-md-12 d-flex stock service">
                         <div class="col-md-4">
                             <div class="service_card">
                                 <div class="product_photo">
@@ -273,34 +276,34 @@
         <!-- MAP BEGIN -->
         <section>
             <div id="mymap">
-                <div class="container">
+                <div class="container map_contact">
                     <div class="row">
                         <div class="col-md-12 contacts-bottom">
                             <div class="contacts-bottom_card">
                                 <p>контакты</p>
                                 <div class="col-md-12 contact_info tel">
-                                    <div class="col-md-2">
+                                    <div class="col-md-2 col-1">
                                         <img src="img/icon/phone-icon.png" alt="phone">
                                     </div>
-                                    <div class="col-md-10 contact_info__tel">
+                                    <div class="col-md-10 col-11 contact_info__tel">
                                         <a href="tel:+88003421333">8 800 034-23-34</a>
                                         <a href="tel:+88003421333">8 495 034-23-34</a>
                                     </div>
                                 </div>
                                 <div class="col-md-12 contact_info location">
-                                    <div class="col-md-2">
+                                    <div class="col-md-2 col-1">
                                         <img src="img/icon/location-icon.png" alt="location">
                                     </div>
-                                    <div class="col-md-10 contact_info__location">
-                                        <address>Московская обл. г. Балашиха, 
-                                                пер. Столовой, д.23, кор. 34</address>
+                                    <div class="col-md-10 col-11 contact_info__location">
+                                        <address><a href="https://goo.gl/maps/5F1CYHzNujXHSTcy8">Московская обл. г. Балашиха, 
+                                            пер. Столовой, д.23, кор. 34</a></address>
                                     </div>
                                 </div>
                                 <div class="col-md-12 contact_info mail">
-                                    <div class="col-md-2">
+                                    <div class="col-md-2 col-1">
                                         <img src="img/icon/mail-icon.png" alt="mail">
                                     </div>
-                                    <div class="col-md-10 contact_info__mail">
+                                    <div class="col-md-10 col-11 contact_info__mail">
                                         <span>Info@stroika.ru</span>
                                     </div>
                                 </div>
@@ -319,12 +322,12 @@
     <footer>
         <div class="container">
             <div class="row">
-                <div class="col-md-12 d-flex info_block footer_info">
+                <div class="col-md-12 info_block footer_info">
                     <div class="col-md-9">
                         <div class="col-md-12 d-flex">
                             <div class="col-md-1 logo">
                                 <div class="logo_wrapp">
-                                    <img src="img/logo-bottom.png" alt="logo">
+                                    <a href="#"><img src="img/logo-bottom.png" alt="logo"></a>
                                 </div>
                             </div>
                             <div class="col-md-11 brand">
@@ -345,7 +348,7 @@
                 <div class="col-md-12 d-flex info_block footer_info license_block">
                     <div class="col-md-9">
                         <div class="col-md-12 d-flex license_text">
-                            <p>© 2016. Гранти </p>
+                            <p>© 2019. Гранти </p>
                         </div>
                     </div>
                     <div class="col-md-3">

@@ -1,0 +1,92 @@
+@media (max-width: 1200px) {};
+@media (max-width: 992px) {
+    #goods_in_stock {
+        .sand_card {
+            & img {
+                width: 100%;
+            }
+        }
+    }    
+    .goods_list__card {
+        & .product_details {
+            padding: 20px 45px;
+        }
+    }
+    .goods_list__card {
+        .product_photo {
+            line-height: 130px;
+        }
+    }
+    .map_contact {
+        max-width: 100%;
+    }
+    .contacts-bottom {
+        margin: 0;
+    }
+    .contacts-bottom_card {
+        width: 100%;
+    }
+    .leaflet-container:nth-child(2) {
+        display: none;
+        position: relative;
+    }
+    &.leaflet-pane {
+        display: none;
+    }
+    &.leaflet-control-container {
+        display: none;
+    }
+};
+
+@media (max-width: 768px) {
+    .info_block__top {
+        display: none !important;
+    }
+    .nav-list {
+        display: none;
+    }
+    .burger {
+        display: block;
+    }
+    .stock {
+        flex-direction: column;
+    }
+    .price_nav {
+        margin-bottom: 12em;
+    }
+    .delivery_details {
+        margin-bottom: 20px;
+    }
+    .goods_list__card {
+        & .product_name {
+            margin-top: 55px;
+        }
+    }
+    .contact_info {
+        & .col-1 {
+            display: flex;
+            align-items: center;
+        }
+    }
+    
+    footer {
+        & .logo {
+            text-align: center;
+        }
+        & .contact {
+            display: grid;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        & .license_text {
+            justify-content: center;
+        }
+        & .callback {
+            text-align: left;
+        }
+    }
+    .footer_info {
+        display: grid;
+        justify-content: space-evenly;
+    }
+};

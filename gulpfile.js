@@ -1,7 +1,6 @@
 const { watch, series,  src, dest, parallel } = require('gulp');
 const sass          = require('gulp-sass');
 const uglify        = require('gulp-uglify');
-const pump          = require('pump');
 const concat        = require('gulp-concat');
 const autoprefixer  = require('gulp-autoprefixer');
 const browserSync   = require('browser-sync').create();
@@ -25,7 +24,6 @@ function sassFoo(cb) {
     .pipe(concat('style.css'))
     .pipe(dest('app/css/'))
     .pipe(browserSync.stream());
-    cb();
 }
 
 // function compress(cb) {
@@ -53,7 +51,6 @@ function compress() {
 function watcher() {
     watch('dist/scss/**/*.scss', series(sassFoo));
 }
-
 
 
 exports.sassFoo = sassFoo;
